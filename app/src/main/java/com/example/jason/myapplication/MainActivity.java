@@ -34,29 +34,34 @@ public class MainActivity extends AppCompatActivity {
         productList.add(
                 new Product(
                         1,
-                        "Pohutukawa - Metrosideros excelsa",
-                        "a coastal evergreen tree in the myrtle family, Myrtaceae, that produces a brilliant display of red (or occasionally orange, yellow or white) flowers made up of a mass of stamens. The pōhutukawa is one of twelve Metrosideros species endemic to New Zealand. Renowned for its vibrant colour and its ability to survive even perched on rocky, precarious cliffs, it has found an important place in New Zealand culture for its strength and beauty and is regarded as a chiefly tree (rākau rangatira) by Māori.The blossom of the tree is called kahika.",
+                        "Pōhutukawa - Metrosideros excelsa",
+                        "a coastal evergreen tree in the myrtle family, Myrtaceae, " +
+                                "that produces a brilliant display of red " +
+                                "(or occasionally orange, yellow or white flowers made up of a mass of stamens. " +
+                                "Renowned for its vibrant colour and its ability to survive even perched on rocky, precarious cliffs.",
                         4.3,
-                        60000,
-                        R.drawable.macbook));
+                        475,
+                        R.drawable.pohutukawa));
 
         productList.add(
                 new Product(
                         1,
-                        "Dell Inspiron 7000 Core i5 7th Gen - (8 GB/1 TB HDD/Windows 10 Home)",
-                        "14 inch, Gray, 1.659 kg",
+                        "Kōwhai",
+                        "small woody legume trees within the genus Sophora that are native to New Zealand. Their natural habitat is beside streams and on the edges of forest, in lowland or mountain open areas. Kōwhai tend to be restricted to mild temperate maritime climates.\n" +
+                                "The blooms of the kōwhai are widely regarded as being New Zealand's national flower.",
                         4.3,
-                        60000,
-                        R.drawable.dellinspiron));
+                        350,
+                        R.drawable.kowhai));
 
         productList.add(
                 new Product(
                         1,
-                        "Microsoft Surface Pro 4 Core m3 6th Gen - (4 GB/128 GB SSD/Windows 10)",
-                        "13.3 inch, Silver, 1.35 kg",
+                        "Lemon Tree",
+                        "citrus limon, is a species of small evergreen tree in the flowering plant family Rutaceae, native to South Asia, primarily North eastern India." +
+                                 "The tree's ellipsoidal yellow fruit is used for culinary and non-culinary purposes throughout the world, primarily for its juice",
                         4.3,
-                        60000,
-                        R.drawable.surface));
+                        120,
+                        R.drawable.lemontree));
 
         adapter = new ProductAdapter(this, productList);
         recyclerView.setAdapter(adapter);
