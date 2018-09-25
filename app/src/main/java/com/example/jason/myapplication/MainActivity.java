@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
 
         productList = new ArrayList<>();
 
-        recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
+        recyclerView = findViewById(R.id.recyclerView);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
@@ -34,8 +34,8 @@ public class MainActivity extends AppCompatActivity {
         productList.add(
                 new Product(
                         1,
-                        "Apple MacBook Air Core i5 5th Gen - (8 GB/128 GB SSD/Mac OS Sierra)",
-                        "13.3 inch, Silver, 1.35 kg",
+                        "Pohutukawa - Metrosideros excelsa",
+                        "a coastal evergreen tree in the myrtle family, Myrtaceae, that produces a brilliant display of red (or occasionally orange, yellow or white) flowers made up of a mass of stamens. The pōhutukawa is one of twelve Metrosideros species endemic to New Zealand. Renowned for its vibrant colour and its ability to survive even perched on rocky, precarious cliffs, it has found an important place in New Zealand culture for its strength and beauty and is regarded as a chiefly tree (rākau rangatira) by Māori.The blossom of the tree is called kahika.",
                         4.3,
                         60000,
                         R.drawable.macbook));
