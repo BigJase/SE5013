@@ -13,12 +13,24 @@ public class HomeScreen extends AppCompatActivity {
         setContentView(R.layout.home_screen);
 
         final Button tree_button = findViewById(R.id.trees_button);
+        final Button products_button = findViewById(R.id.products_button);
+
         tree_button.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
                 Intent intent = new Intent(HomeScreen.this, MainActivity.class);
                 startActivity(intent);
             }
         });
+
+        products_button.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v){
+                Intent intent = new Intent(HomeScreen.this, ProductScreen.class);
+                startActivity(intent);
+            }
+
+        });
+
+
     }
 
 

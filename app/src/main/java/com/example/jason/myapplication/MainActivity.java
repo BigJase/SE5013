@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
 
     RecyclerView recyclerView;
     ProductAdapter adapter;
-    List<Product> productList;
+    List<Product> treeList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         //initializing the productlist
-        productList = new ArrayList<>();
+        treeList = new ArrayList<>();
 
 
         EditText editText = findViewById(R.id.edittext);
@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         //adding some items to our list
-        productList.add(
+        treeList.add(
                 new Product(
                         1,
                         "Pohutukawa",
@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
                         475,
                         R.drawable.pohutukawa));
 
-        productList.add(
+        treeList.add(
                 new Product(
                         1,
                         "Kōwhai",
@@ -67,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
                         350,
                         R.drawable.kowhai));
 
-        productList.add(
+        treeList.add(
                 new Product(
                         1,
                         "Lemon Tree",
@@ -75,7 +75,7 @@ public class MainActivity extends AppCompatActivity {
                         4.3,
                         120,
                         R.drawable.lemontree));
-        productList.add(
+        treeList.add(
                 new Product(
                         1,
                         "Pohutukawa",
@@ -84,7 +84,7 @@ public class MainActivity extends AppCompatActivity {
                         475,
                         R.drawable.pohutukawa));
 
-        productList.add(
+        treeList.add(
                 new Product(
                         1,
                         "Kōwhai",
@@ -93,7 +93,7 @@ public class MainActivity extends AppCompatActivity {
                         350,
                         R.drawable.kowhai));
 
-        productList.add(
+        treeList.add(
                 new Product(
                         1,
                         "Lemon Tree",
@@ -101,7 +101,7 @@ public class MainActivity extends AppCompatActivity {
                         4.3,
                         120,
                         R.drawable.lemontree));
-        productList.add(
+        treeList.add(
                 new Product(
                         1,
                         "Pohutukawa",
@@ -110,7 +110,7 @@ public class MainActivity extends AppCompatActivity {
                         475,
                         R.drawable.pohutukawa));
 
-        productList.add(
+        treeList.add(
                 new Product(
                         1,
                         "Kōwhai",
@@ -119,7 +119,7 @@ public class MainActivity extends AppCompatActivity {
                         350,
                         R.drawable.kowhai));
 
-        productList.add(
+        treeList.add(
                 new Product(
                         1,
                         "Lemon Tree",
@@ -127,7 +127,7 @@ public class MainActivity extends AppCompatActivity {
                         4.3,
                         120,
                         R.drawable.lemontree));
-        productList.add(
+        treeList.add(
                 new Product(
                         1,
                         "Pohutukawa",
@@ -136,7 +136,7 @@ public class MainActivity extends AppCompatActivity {
                         475,
                         R.drawable.pohutukawa));
 
-        productList.add(
+        treeList.add(
                 new Product(
                         1,
                         "Kōwhai",
@@ -145,7 +145,7 @@ public class MainActivity extends AppCompatActivity {
                         350,
                         R.drawable.kowhai));
 
-        productList.add(
+        treeList.add(
                 new Product(
                         1,
                         "Lemon Tree",
@@ -153,7 +153,7 @@ public class MainActivity extends AppCompatActivity {
                         4.3,
                         120,
                         R.drawable.lemontree));
-        productList.add(
+        treeList.add(
                 new Product(
                         1,
                         "Pohutukawa",
@@ -162,7 +162,7 @@ public class MainActivity extends AppCompatActivity {
                         475,
                         R.drawable.pohutukawa));
 
-        productList.add(
+        treeList.add(
                 new Product(
                         1,
                         "Kōwhai",
@@ -171,7 +171,7 @@ public class MainActivity extends AppCompatActivity {
                         350,
                         R.drawable.kowhai));
 
-        productList.add(
+        treeList.add(
                 new Product(
                         1,
                         "Lemon Tree",
@@ -180,7 +180,7 @@ public class MainActivity extends AppCompatActivity {
                         120,
                         R.drawable.lemontree));
 
-        adapter = new ProductAdapter(this, productList);
+        adapter = new ProductAdapter(this, treeList);
         recyclerView.setAdapter(adapter);
 
     }
@@ -188,7 +188,7 @@ public class MainActivity extends AppCompatActivity {
     private void filter(String text){
         ArrayList<Product> filteredList = new ArrayList<>();
 
-        for(Product item : productList){
+        for(Product item : treeList){
             if (item.getTitle().toLowerCase().contains(text.toLowerCase())) {
                 filteredList.add(item);
             }
