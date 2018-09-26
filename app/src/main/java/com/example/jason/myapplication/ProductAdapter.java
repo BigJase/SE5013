@@ -94,6 +94,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -141,6 +143,10 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductV
         return productList.size();
     }
 
+    public void filterList(ArrayList<Product> filteredList){
+        productList = filteredList;
+        notifyDataSetChanged();
+    }
 
     class ProductViewHolder extends RecyclerView.ViewHolder {
 

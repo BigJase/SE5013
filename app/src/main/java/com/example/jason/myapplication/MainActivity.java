@@ -4,7 +4,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.widget.EditText;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -12,15 +14,12 @@ public class MainActivity extends AppCompatActivity {
 
     RecyclerView recyclerView;
     ProductAdapter adapter;
-
     List<Product> productList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        productList = new ArrayList<>();
 
         recyclerView = findViewById(R.id.recyclerView);
         recyclerView.setHasFixedSize(true);
@@ -30,15 +29,31 @@ public class MainActivity extends AppCompatActivity {
         productList = new ArrayList<>();
 
 
+        EditText editText = findViewById(R.id.edittext);
+        editText.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                filter(s.toString());
+            }
+        });
+
+
         //adding some items to our list
         productList.add(
                 new Product(
                         1,
-                        "Pōhutukawa - Metrosideros excelsa",
-                        "a coastal evergreen tree in the myrtle family, Myrtaceae, " +
-                                "that produces a brilliant display of red " +
-                                "(or occasionally orange, yellow or white flowers made up of a mass of stamens. " +
-                                "Renowned for its vibrant colour and its ability to survive even perched on rocky, precarious cliffs.",
+                        "Pohutukawa",
+                        "a coastal evergreen tree in the myrtle family, Myrtaceae, that produces a brilliant display of red ",
                         4.3,
                         475,
                         R.drawable.pohutukawa));
@@ -47,8 +62,7 @@ public class MainActivity extends AppCompatActivity {
                 new Product(
                         1,
                         "Kōwhai",
-                        "small woody legume trees within the genus Sophora that are native to New Zealand. Their natural habitat is beside streams and on the edges of forest, in lowland or mountain open areas. Kōwhai tend to be restricted to mild temperate maritime climates.\n" +
-                                "The blooms of the kōwhai are widely regarded as being New Zealand's national flower.",
+                        "small woody legume trees within the genus Sophora that are native to New Zealand.",
                         4.3,
                         350,
                         R.drawable.kowhai));
@@ -57,8 +71,111 @@ public class MainActivity extends AppCompatActivity {
                 new Product(
                         1,
                         "Lemon Tree",
-                        "citrus limon, is a species of small evergreen tree in the flowering plant family Rutaceae, native to South Asia, primarily North eastern India." +
-                                 "The tree's ellipsoidal yellow fruit is used for culinary and non-culinary purposes throughout the world, primarily for its juice",
+                        "citrus limon, is a species of small evergreen tree in the flowering plant family Rutaceae.",
+                        4.3,
+                        120,
+                        R.drawable.lemontree));
+        productList.add(
+                new Product(
+                        1,
+                        "Pohutukawa",
+                        "a coastal evergreen tree in the myrtle family, Myrtaceae, that produces a brilliant display of red ",
+                        4.3,
+                        475,
+                        R.drawable.pohutukawa));
+
+        productList.add(
+                new Product(
+                        1,
+                        "Kōwhai",
+                        "small woody legume trees within the genus Sophora that are native to New Zealand.",
+                        4.3,
+                        350,
+                        R.drawable.kowhai));
+
+        productList.add(
+                new Product(
+                        1,
+                        "Lemon Tree",
+                        "citrus limon, is a species of small evergreen tree in the flowering plant family Rutaceae.",
+                        4.3,
+                        120,
+                        R.drawable.lemontree));
+        productList.add(
+                new Product(
+                        1,
+                        "Pohutukawa",
+                        "a coastal evergreen tree in the myrtle family, Myrtaceae, that produces a brilliant display of red ",
+                        4.3,
+                        475,
+                        R.drawable.pohutukawa));
+
+        productList.add(
+                new Product(
+                        1,
+                        "Kōwhai",
+                        "small woody legume trees within the genus Sophora that are native to New Zealand.",
+                        4.3,
+                        350,
+                        R.drawable.kowhai));
+
+        productList.add(
+                new Product(
+                        1,
+                        "Lemon Tree",
+                        "citrus limon, is a species of small evergreen tree in the flowering plant family Rutaceae.",
+                        4.3,
+                        120,
+                        R.drawable.lemontree));
+        productList.add(
+                new Product(
+                        1,
+                        "Pohutukawa",
+                        "a coastal evergreen tree in the myrtle family, Myrtaceae, that produces a brilliant display of red ",
+                        4.3,
+                        475,
+                        R.drawable.pohutukawa));
+
+        productList.add(
+                new Product(
+                        1,
+                        "Kōwhai",
+                        "small woody legume trees within the genus Sophora that are native to New Zealand.",
+                        4.3,
+                        350,
+                        R.drawable.kowhai));
+
+        productList.add(
+                new Product(
+                        1,
+                        "Lemon Tree",
+                        "citrus limon, is a species of small evergreen tree in the flowering plant family Rutaceae.",
+                        4.3,
+                        120,
+                        R.drawable.lemontree));
+        productList.add(
+                new Product(
+                        1,
+                        "Pohutukawa",
+                        "a coastal evergreen tree in the myrtle family, Myrtaceae, that produces a brilliant display of red ",
+                        4.3,
+                        475,
+                        R.drawable.pohutukawa));
+
+        productList.add(
+                new Product(
+                        1,
+                        "Kōwhai",
+                        "small woody legume trees within the genus Sophora that are native to New Zealand.",
+                        4.3,
+                        350,
+                        R.drawable.kowhai));
+
+        productList.add(
+                new Product(
+                        1,
+                        "Lemon Tree",
+                        "citrus limon, is a species of small evergreen tree in the flowering plant family Rutaceae.",
                         4.3,
                         120,
                         R.drawable.lemontree));
@@ -66,5 +183,17 @@ public class MainActivity extends AppCompatActivity {
         adapter = new ProductAdapter(this, productList);
         recyclerView.setAdapter(adapter);
 
+    }
+
+    private void filter(String text){
+        ArrayList<Product> filteredList = new ArrayList<>();
+
+        for(Product item : productList){
+            if (item.getTitle().toLowerCase().contains(text.toLowerCase())) {
+                filteredList.add(item);
+            }
+        }
+
+        adapter.filterList(filteredList);
     }
 }
