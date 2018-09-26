@@ -14,15 +14,104 @@ public class ProductScreen extends AppCompatActivity {
     ProductAdapter adapter;
     List<Product> productList;
 
+    @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.product_screen);
 
-        recyclerView = findViewById(R.id.recyclerView);
-        recyclerView.setHasFixedSize(false);
+        recyclerView = findViewById(R.id.product_recycler);
+        recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         productList = new ArrayList<>();
+
+        productList.add( new Product(
+                1,
+                "Shovel",
+                "A tool used for digging",
+                4.0,
+                999,
+                R.drawable.shovel));
+
+        productList.add( new Product(
+                1,
+                "Shovel",
+                "A tool used for digging",
+                4.0,
+                999,
+                R.drawable.shovel));
+
+        productList.add( new Product(
+                1,
+                "Shovel",
+                "A tool used for digging",
+                4.0,
+                999,
+                R.drawable.shovel));
+
+        productList.add( new Product(
+                1,
+                "Shovel",
+                "A tool used for digging",
+                4.0,
+                999,
+                R.drawable.shovel));
+
+        productList.add( new Product(
+                1,
+                "Shovel",
+                "A tool used for digging",
+                4.0,
+                999,
+                R.drawable.shovel));
+
+        productList.add( new Product(
+                1,
+                "Shovel",
+                "A tool used for digging",
+                4.0,
+                999,
+                R.drawable.shovel));
+
+        productList.add( new Product(
+                1,
+                "Shovel",
+                "A tool used for digging",
+                4.0,
+                999,
+                R.drawable.shovel));
+
+        productList.add( new Product(
+                1,
+                "Shovel",
+                "A tool used for digging",
+                4.0,
+                999,
+                R.drawable.shovel));
+
+        productList.add( new Product(
+                1,
+                "Shovel",
+                "A tool used for digging",
+                4.0,
+                999,
+                R.drawable.shovel));
+
+        productList.add( new Product(
+                1,
+                "Shovel",
+                "A tool used for digging",
+                4.0,
+                999,
+                R.drawable.shovel));
+
+        productList.add( new Product(
+                1,
+                "Shovel",
+                "A tool used for digging",
+                4.0,
+                999,
+                R.drawable.shovel));
 
         productList.add( new Product(
                 1,
