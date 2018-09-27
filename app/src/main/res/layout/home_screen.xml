@@ -8,19 +8,12 @@
 
     <Button
         android:id="@+id/trees_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
+        android:layout_width="100dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="72dp"
         android:text="Trees"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.062"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView4"
-        app:layout_constraintVertical_bias="0.209" />
+        tools:layout_editor_absoluteY="175dp" />
 
     <Button
         android:id="@+id/cart_button"
@@ -28,10 +21,11 @@
         android:layout_height="48dp"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginBottom="200dp"
+        android:layout_marginBottom="288dp"
         android:text="Cart"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.266"
         app:layout_constraintStart_toEndOf="@+id/trees_button" />
 
     <Button
@@ -45,11 +39,11 @@
         android:text="Products"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.102"
+        app:layout_constraintHorizontal_bias="0.238"
         app:layout_constraintHorizontal_weight=".50"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/trees_button"
-        app:layout_constraintVertical_bias="0.165"
+        app:layout_constraintVertical_bias="0.075"
         app:layout_constraintVertical_weight="0.5" />
 
     <ImageView

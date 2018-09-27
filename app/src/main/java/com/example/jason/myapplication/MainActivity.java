@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
                 new Product(
                         1,
                         "Pohutukawa",
-                        "a coastal evergreen tree in the myrtle family, Myrtaceae, that produces a brilliant display of red ",
+                        "a coastal evergreen tree in the myrtle family, Myrtaceae, that produces a brilliant activity_login of red ",
                         4.3,
                         475,
                         R.drawable.pohutukawa));
@@ -79,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
                 new Product(
                         1,
                         "Pohutukawa",
-                        "a coastal evergreen tree in the myrtle family, Myrtaceae, that produces a brilliant display of red ",
+                        "a coastal evergreen tree in the myrtle family, Myrtaceae, that produces a brilliant activity_login of red ",
                         4.3,
                         475,
                         R.drawable.pohutukawa));
@@ -105,7 +105,7 @@ public class MainActivity extends AppCompatActivity {
                 new Product(
                         1,
                         "Pohutukawa",
-                        "a coastal evergreen tree in the myrtle family, Myrtaceae, that produces a brilliant display of red ",
+                        "a coastal evergreen tree in the myrtle family, Myrtaceae, that produces a brilliant activity_login of red ",
                         4.3,
                         475,
                         R.drawable.pohutukawa));
@@ -131,7 +131,7 @@ public class MainActivity extends AppCompatActivity {
                 new Product(
                         1,
                         "Pohutukawa",
-                        "a coastal evergreen tree in the myrtle family, Myrtaceae, that produces a brilliant display of red ",
+                        "a coastal evergreen tree in the myrtle family, Myrtaceae, that produces a brilliant activity_login of red ",
                         4.3,
                         475,
                         R.drawable.pohutukawa));
@@ -157,7 +157,7 @@ public class MainActivity extends AppCompatActivity {
                 new Product(
                         1,
                         "Pohutukawa",
-                        "a coastal evergreen tree in the myrtle family, Myrtaceae, that produces a brilliant display of red ",
+                        "a coastal evergreen tree in the myrtle family, Myrtaceae, that produces a brilliant activity_login of red ",
                         4.3,
                         475,
                         R.drawable.pohutukawa));
