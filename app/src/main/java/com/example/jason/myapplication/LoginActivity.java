@@ -26,7 +26,7 @@ public class LoginActivity extends Activity implements View.OnClickListener{
     @Override
     public void onClick(View v) {
         switch(v.getId()){
-            case R.id.bLogin;
+            case R.id.bLogin:
             break;
         }
     }
