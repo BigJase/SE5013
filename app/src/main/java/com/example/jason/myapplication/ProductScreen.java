@@ -19,7 +19,7 @@ public class ProductScreen extends AppCompatActivity {
         setContentView(R.layout.product_screen);
 
         recyclerView = findViewById(R.id.recyclerView);
-        recyclerView.setHasFixedSize(true);
+        recyclerView.setHasFixedSize(false);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         productList = new ArrayList<>();
