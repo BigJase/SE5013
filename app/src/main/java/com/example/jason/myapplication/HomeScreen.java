@@ -8,12 +8,17 @@ import android.widget.Button;
 
 public class HomeScreen extends AppCompatActivity {
 
+    Button bLogout;
+
+
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.home_screen);
 
         final Button tree_button = findViewById(R.id.trees_button);
         final Button products_button = findViewById(R.id.products_button);
+        bLogout = (Button) findViewById(R.id.bLogout);
+
 
         tree_button.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
@@ -30,6 +35,12 @@ public class HomeScreen extends AppCompatActivity {
 
         });
 
+        bLogout.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+                Intent intent = new Intent(HomeScreen.this, LoginActivity.class);
+                startActivity(intent);
+            }
+        });
 
     }
 
