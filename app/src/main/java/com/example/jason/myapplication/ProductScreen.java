@@ -28,11 +28,67 @@ public class ProductScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.product_screen);
 
-        recyclerView = findViewById(R.id.recyclerView);
+        recyclerView = findViewById(R.id.product_list);
         recyclerView.setHasFixedSize(false);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         productList = new ArrayList<>();
+
+        productList.add( new Product(
+                1,
+                "Shovel",
+                "A tool used for digging",
+                4.0,
+                999,
+                R.drawable.shovel));
+
+        productList.add( new Product(
+                1,
+                "Shovel",
+                "A tool used for digging",
+                4.0,
+                999,
+                R.drawable.shovel));
+
+        productList.add( new Product(
+                1,
+                "Shovel",
+                "A tool used for digging",
+                4.0,
+                999,
+                R.drawable.shovel));
+
+        productList.add( new Product(
+                1,
+                "Shovel",
+                "A tool used for digging",
+                4.0,
+                999,
+                R.drawable.shovel));
+
+        productList.add( new Product(
+                1,
+                "Shovel",
+                "A tool used for digging",
+                4.0,
+                999,
+                R.drawable.shovel));
+
+        productList.add( new Product(
+                1,
+                "Shovel",
+                "A tool used for digging",
+                4.0,
+                999,
+                R.drawable.shovel));
+
+        productList.add( new Product(
+                1,
+                "Shovel",
+                "A tool used for digging",
+                4.0,
+                999,
+                R.drawable.shovel));
 
         productList.add( new Product(
                 1,
