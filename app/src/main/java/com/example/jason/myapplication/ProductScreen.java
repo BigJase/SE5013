@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.MenuItem;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,6 +14,15 @@ public class ProductScreen extends AppCompatActivity {
     RecyclerView recyclerView;
     ProductAdapter adapter;
     List<Product> productList;
+
+    public boolean onOptionsItemSelected(MenuItem item){
+        int id = item.getItemId();
+
+        if(id == android.R.id.home){
+            this.finish();
+        }
+        return super.onOptionsItemSelected(item);
+    }
 
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
@@ -34,6 +44,9 @@ public class ProductScreen extends AppCompatActivity {
 
         adapter = new ProductAdapter(this, productList);
         recyclerView.setAdapter(adapter);
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
     }
 
 
