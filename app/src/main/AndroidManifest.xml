@@ -22,7 +22,9 @@
         </activity>
         <activity android:name=".ProductScreen" />
         <activity android:name=".RegistgerActivity" />
-        <activity android:name=".UserAreaActivity"></activity>
+        <activity android:name=".UserAreaActivity" />
+        <activity android:name=".ItemDetails" />
+        <activity android:name=".viewList"></activity>
     </application>
 
 </manifest>
