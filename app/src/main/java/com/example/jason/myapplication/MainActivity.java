@@ -7,6 +7,8 @@ import android.support.v7.widget.RecyclerView;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.widget.EditText;
+import android.widget.ListView;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -47,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
+        //treeList.add(new Product)
         //adding some items to our list
         treeList.add(
                 new Product(
@@ -60,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
 
         treeList.add(
                 new Product(
-                        1,
+                        2,
                         "Kōwhai",
                         "small woody legume trees within the genus Sophora that are native to New Zealand.",
                         4.3,
@@ -69,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
 
         treeList.add(
                 new Product(
-                        1,
+                        3,
                         "Lemon Tree",
                         "citrus limon, is a species of small evergreen tree in the flowering plant family Rutaceae.",
                         4.3,
@@ -77,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
                         R.drawable.lemontree));
         treeList.add(
                 new Product(
-                        1,
+                        4,
                         "Pohutukawa",
                         "a coastal evergreen tree in the myrtle family, Myrtaceae, that produces a brilliant activity_login of red ",
                         4.3,
@@ -86,7 +88,7 @@ public class MainActivity extends AppCompatActivity {
 
         treeList.add(
                 new Product(
-                        1,
+                        5,
                         "Kōwhai",
                         "small woody legume trees within the genus Sophora that are native to New Zealand.",
                         4.3,
@@ -95,7 +97,7 @@ public class MainActivity extends AppCompatActivity {
 
         treeList.add(
                 new Product(
-                        1,
+                        6,
                         "Lemon Tree",
                         "citrus limon, is a species of small evergreen tree in the flowering plant family Rutaceae.",
                         4.3,
@@ -103,7 +105,7 @@ public class MainActivity extends AppCompatActivity {
                         R.drawable.lemontree));
         treeList.add(
                 new Product(
-                        1,
+                        7,
                         "Pohutukawa",
                         "a coastal evergreen tree in the myrtle family, Myrtaceae, that produces a brilliant activity_login of red ",
                         4.3,
@@ -112,7 +114,7 @@ public class MainActivity extends AppCompatActivity {
 
         treeList.add(
                 new Product(
-                        1,
+                        8,
                         "Kōwhai",
                         "small woody legume trees within the genus Sophora that are native to New Zealand.",
                         4.3,
@@ -121,7 +123,7 @@ public class MainActivity extends AppCompatActivity {
 
         treeList.add(
                 new Product(
-                        1,
+                        9,
                         "Lemon Tree",
                         "citrus limon, is a species of small evergreen tree in the flowering plant family Rutaceae.",
                         4.3,
@@ -129,7 +131,7 @@ public class MainActivity extends AppCompatActivity {
                         R.drawable.lemontree));
         treeList.add(
                 new Product(
-                        1,
+                        10,
                         "Pohutukawa",
                         "a coastal evergreen tree in the myrtle family, Myrtaceae, that produces a brilliant activity_login of red ",
                         4.3,
@@ -138,7 +140,7 @@ public class MainActivity extends AppCompatActivity {
 
         treeList.add(
                 new Product(
-                        1,
+                        11,
                         "Kōwhai",
                         "small woody legume trees within the genus Sophora that are native to New Zealand.",
                         4.3,
@@ -147,7 +149,7 @@ public class MainActivity extends AppCompatActivity {
 
         treeList.add(
                 new Product(
-                        1,
+                        12,
                         "Lemon Tree",
                         "citrus limon, is a species of small evergreen tree in the flowering plant family Rutaceae.",
                         4.3,
@@ -155,7 +157,7 @@ public class MainActivity extends AppCompatActivity {
                         R.drawable.lemontree));
         treeList.add(
                 new Product(
-                        1,
+                        13,
                         "Pohutukawa",
                         "a coastal evergreen tree in the myrtle family, Myrtaceae, that produces a brilliant activity_login of red ",
                         4.3,
@@ -164,7 +166,7 @@ public class MainActivity extends AppCompatActivity {
 
         treeList.add(
                 new Product(
-                        1,
+                        14,
                         "Kōwhai",
                         "small woody legume trees within the genus Sophora that are native to New Zealand.",
                         4.3,
@@ -173,7 +175,7 @@ public class MainActivity extends AppCompatActivity {
 
         treeList.add(
                 new Product(
-                        1,
+                        15,
                         "Lemon Tree",
                         "citrus limon, is a species of small evergreen tree in the flowering plant family Rutaceae.",
                         4.3,
@@ -182,6 +184,8 @@ public class MainActivity extends AppCompatActivity {
 
         adapter = new ProductAdapter(this, treeList);
         recyclerView.setAdapter(adapter);
+
+        //ListView lv = (ListView)findViewById(R.id.)
 
     }
 

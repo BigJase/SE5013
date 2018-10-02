@@ -43,7 +43,7 @@ public class ProductScreen extends AppCompatActivity {
                 R.drawable.shovel));
 
         productList.add( new Product(
-                1,
+                2,
                 "Shovel",
                 "A tool used for digging",
                 4.0,
@@ -51,7 +51,7 @@ public class ProductScreen extends AppCompatActivity {
                 R.drawable.shovel));
 
         productList.add( new Product(
-                1,
+                3,
                 "Shovel",
                 "A tool used for digging",
                 4.0,
@@ -59,7 +59,7 @@ public class ProductScreen extends AppCompatActivity {
                 R.drawable.shovel));
 
         productList.add( new Product(
-                1,
+                4,
                 "Shovel",
                 "A tool used for digging",
                 4.0,
@@ -67,7 +67,7 @@ public class ProductScreen extends AppCompatActivity {
                 R.drawable.shovel));
 
         productList.add( new Product(
-                1,
+                5,
                 "Shovel",
                 "A tool used for digging",
                 4.0,
@@ -75,7 +75,7 @@ public class ProductScreen extends AppCompatActivity {
                 R.drawable.shovel));
 
         productList.add( new Product(
-                1,
+                6,
                 "Shovel",
                 "A tool used for digging",
                 4.0,
@@ -83,7 +83,7 @@ public class ProductScreen extends AppCompatActivity {
                 R.drawable.shovel));
 
         productList.add( new Product(
-                1,
+                7,
                 "Shovel",
                 "A tool used for digging",
                 4.0,
@@ -91,7 +91,7 @@ public class ProductScreen extends AppCompatActivity {
                 R.drawable.shovel));
 
         productList.add( new Product(
-                1,
+                8,
                 "Shovel",
                 "A tool used for digging",
                 4.0,
