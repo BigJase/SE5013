@@ -18,20 +18,20 @@
         tools:layout_editor_absoluteY="432dp" />
 
     <ImageView
-        android:id="@+id/treePicture"
-        android:layout_width="276dp"
-        android:layout_height="130dp"
+        android:id="@+id/itemPic"
+        android:layout_width="246dp"
+        android:layout_height="221dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="76dp"
+        android:layout_marginTop="68dp"
         app:srcCompat="@mipmap/ic_launcher" />
 
     <TextView
-        android:id="@+id/treeName"
+        android:id="@+id/itemName"
         android:layout_width="269dp"
         android:layout_height="43dp"
         android:layout_alignParentTop="true"
-        android:layout_alignStart="@+id/treePicture"
+        android:layout_alignStart="@+id/itemPic"
         android:layout_marginTop="20dp"
         android:text="Name..."
         android:textSize="24sp" />
@@ -63,7 +63,7 @@
         android:text="Height:" />
 
     <TextView
-        android:id="@+id/treeDesc"
+        android:id="@+id/itemDescription"
         android:layout_width="183dp"
         android:layout_height="80dp"
         android:layout_alignParentEnd="true"
@@ -75,15 +75,15 @@
         android:id="@+id/treeHeight"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/treeDesc"
+        android:layout_alignStart="@+id/itemDescription"
         android:layout_alignTop="@+id/labelHeight"
         android:text="..." />
 
     <TextView
-        android:id="@+id/treePrice"
+        android:id="@+id/itemPrice"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/treeDesc"
+        android:layout_alignStart="@+id/itemDescription"
         android:layout_alignTop="@+id/labelPrice"
         android:text="$..." />
 

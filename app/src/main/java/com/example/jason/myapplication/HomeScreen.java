@@ -97,7 +97,7 @@ HomeScreen extends AppCompatActivity {
 
         tree_button.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
-                Intent intent = new Intent(HomeScreen.this, viewList.class);
+                Intent intent = new Intent(HomeScreen.this, ItemsSold.class);
                 startActivity(intent);
             }
         });

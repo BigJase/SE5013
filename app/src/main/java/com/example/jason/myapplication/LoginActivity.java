@@ -3,18 +3,31 @@ package com.example.jason.myapplication;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.app.ActivityCompat;
+import android.support.v7.app.AppCompatActivity;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-public class LoginActivity extends Activity implements View.OnClickListener{
+public class LoginActivity extends AppCompatActivity implements View.OnClickListener{
 
     Button bLogin;
     EditText etName, etUsername, etPassword;
     TextView tvRegisterHere;
 
     UserLocalStore userLocalStore;
+
+
+    public boolean onOptionsItemSelected(MenuItem item){
+        int id = item.getItemId();
+
+        if(id == android.R.id.home){
+            this.finish();
+        }
+        return super.onOptionsItemSelected(item);
+    }
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,12 +38,15 @@ public class LoginActivity extends Activity implements View.OnClickListener{
         etPassword = (EditText) findViewById(R.id.etPassword);
         bLogin = (Button) findViewById(R.id.bLogin);
         tvRegisterHere = (TextView) findViewById(R.id.tvRegisterHere);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
 
         bLogin.setOnClickListener(this);
         tvRegisterHere.setOnClickListener(this);
 
         userLocalStore = new UserLocalStore(this);
     }
+
 
     @Override
     public void onClick(View v) {

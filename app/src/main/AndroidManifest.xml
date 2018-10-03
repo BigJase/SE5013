@@ -24,7 +24,7 @@
         <activity android:name=".RegistgerActivity" />
         <activity android:name=".UserAreaActivity" />
         <activity android:name=".ItemDetails" />
-        <activity android:name=".viewList"></activity>
+        <activity android:name=".ItemsSold"></activity>
     </application>
 
 </manifest>
