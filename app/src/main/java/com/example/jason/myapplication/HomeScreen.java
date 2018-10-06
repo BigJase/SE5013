@@ -6,82 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
-public class
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-HomeScreen extends AppCompatActivity {
+public class HomeScreen extends AppCompatActivity {
 
     Button bLogout;
 
@@ -97,14 +22,14 @@ HomeScreen extends AppCompatActivity {
 
         tree_button.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
-                Intent intent = new Intent(HomeScreen.this, ItemsSold.class);
+                Intent intent = new Intent(HomeScreen.this, TreesSold.class);
                 startActivity(intent);
             }
         });
 
         products_button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v){
-                Intent intent = new Intent(HomeScreen.this, ProductScreen.class);
+                Intent intent = new Intent(HomeScreen.this, ProductsSold.class);
                 startActivity(intent);
             }
 

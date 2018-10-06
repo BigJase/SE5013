@@ -11,20 +11,22 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".MainActivity" />
-        <activity android:name=".HomeScreen" />
-        <activity android:name=".LoginActivity">
+        <activity android:name=".MainActivity" android:label="Main activity"/>
+        <activity android:name=".HomeScreen" android:label="TreeCo"/>
+        <activity android:name=".LoginActivity" android:label="TreeCo">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ProductScreen" />
-        <activity android:name=".RegistgerActivity" />
-        <activity android:name=".UserAreaActivity" />
-        <activity android:name=".ItemDetails" />
-        <activity android:name=".ItemsSold"></activity>
+        <activity android:name=".ProductScreen" android:label="Products"/>
+        <activity android:name=".RegistgerActivity" android:label="Register"/>
+        <activity android:name=".UserAreaActivity" android:label="UserArea"/>
+        <activity android:name=".ItemDetails" android:label="ItemDetails"/>
+        <activity android:name=".TreesSold" android:label="Trees"/>
+        <activity android:name=".ProductsSold" android:label="Products"/>
+
     </application>
 
 </manifest>
