@@ -22,14 +22,14 @@ public class HomeScreen extends AppCompatActivity {
 
         tree_button.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
-                Intent intent = new Intent(HomeScreen.this, TreesSold.class);
+                Intent intent = new Intent(HomeScreen.this, TreeList.class);
                 startActivity(intent);
             }
         });
 
         products_button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v){
-                Intent intent = new Intent(HomeScreen.this, ProductsSold.class);
+                Intent intent = new Intent(HomeScreen.this, ProductList.class);
                 startActivity(intent);
             }
 

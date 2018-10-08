@@ -16,7 +16,7 @@ import java.util.List;
 
 import static java.lang.String.valueOf;
 
-public class TreesSold extends AppCompatActivity {
+public class TreeList extends AppCompatActivity {
 
     private List<Trees> trees = new ArrayList<>();
     //private List<Products> products = new ArrayList<>();
@@ -125,7 +125,7 @@ public class TreesSold extends AppCompatActivity {
     //Trees
     private class MyListAdapter extends ArrayAdapter<Trees>{
         public MyListAdapter() {
-            super(TreesSold.this, 0, trees);
+            super(TreeList.this, 0, trees);
         }
 
         @Override

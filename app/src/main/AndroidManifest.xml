@@ -11,7 +11,6 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".MainActivity" android:label="Main activity"/>
         <activity android:name=".HomeScreen" android:label="TreeCo"/>
         <activity android:name=".LoginActivity" android:label="TreeCo">
             <intent-filter>
@@ -21,11 +20,11 @@
             </intent-filter>
         </activity>
         <activity android:name=".ProductScreen" android:label="Products"/>
-        <activity android:name=".RegistgerActivity" android:label="Register"/>
+        <activity android:name=".RegisterActivity" android:label="Register"/>
         <activity android:name=".UserAreaActivity" android:label="UserArea"/>
         <activity android:name=".ItemDetails" android:label="ItemDetails"/>
-        <activity android:name=".TreesSold" android:label="Trees"/>
-        <activity android:name=".ProductsSold" android:label="Products"/>
+        <activity android:name=".TreeList" android:label="Trees"/>
+        <activity android:name=".ProductList" android:label="Products"/>
 
     </application>
 
