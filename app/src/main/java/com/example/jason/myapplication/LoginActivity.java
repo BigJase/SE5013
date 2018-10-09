@@ -1,85 +1,51 @@
 package com.example.jason.myapplication;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.Snackbar;
-import android.support.design.widget.TextInputLayout;
-import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
-import android.text.Html;
-import android.text.Spanned;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import static android.text.Html.fromHtml;
+public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
 
-public class LoginActivity extends AppCompatActivity {
+    Button bLogin;
+    EditText etName, etUsername, etPassword;
+    TextView tvRegisterHere;
 
-//    declaration EditTexts
-    EditText etEmail,etPassword;
-
-//    declaration TextInputLayout
-    TextInputLayout textInputLayoutEmail, textInputLayoutPassword;
-
-//    declaration Button
-    Button btLogin;
+    UserLocalStore userLocalStore;
 
 
-//    declaration SqliteHelper
-    SqliteHelper sqliteHelper;
-
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
-        sqliteHelper = new SqliteHelper(this);
-        initCreateAccountTextView();
-        initSkipLoginTextView();
-        initViews();
-
-//        set click event of login button
-        btLogin.setOnClickListener((new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-//              check user input is correct or not
-                if(validate()){
-
-//                  get values from ExtitText fields
-                    String Email = etEmail.getText().toString();
-                    String Password = etPassword.getText().toString();
-
-//                  Authenticate user
-                    User currentUser = sqliteHelper.Authenticate(new User(null, null, Email, Password));
-
-//                  Check if Authentication is successful or not
-                    if(currentUser != null){
-                        Snackbar.make(btLogin, "Sucessfully Logged in!", Snackbar.LENGTH_LONG).show();
-
-//                      User Logged in successfully Launch home Screen activity
-                      Intent intent = new Intent(LoginActivity.this, HomeScreen.class);
-                      startActivity(intent);
-//                      finish();
-                    } else{
-                        Snackbar.make(btLogin, "Failed to log in, please try again", Snackbar.LENGTH_LONG).show();
-                    }
-                }
-            }
-        }));
-
-    }
-
-    public boolean onOptionsItemSelected(MenuItem item){
+    public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
 
-        if(id == android.R.id.home){
+        if (id == android.R.id.home) {
             this.finish();
         }
         return super.onOptionsItemSelected(item);
     }
 
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_login);
+
+        etName = (EditText) findViewById(R.id.etName);
+        etUsername = (EditText) findViewById(R.id.etUsername);
+        etPassword = (EditText) findViewById(R.id.etPassword);
+        bLogin = (Button) findViewById(R.id.bLogin);
+        tvRegisterHere = (TextView) findViewById(R.id.tvRegisterHere);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+
+        bLogin.setOnClickListener(this);
+        tvRegisterHere.setOnClickListener(this);
+
+        userLocalStore = new UserLocalStore(this);
+    }
+
+<<<<<<< HEAD
     //this method used to set Create account TextView text and click event( maltipal colors
     // for TextView yet not supported in Xml so i have done it programmatically)
     private void initCreateAccountTextView() {
@@ -93,74 +59,27 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
     }
+=======
+>>>>>>> parent of e46a6a9... Update app/src/main/java/com/example/jason/myapplication/LoginActivity.java
 
-    private void initSkipLoginTextView() {
-        TextView textViewSkipLogin = (TextView) findViewById(R.id.textViewSkipLogin);
-        textViewSkipLogin.setText(fromHtml("<font color='#ffffff'>Skip login and register. </font><font color='#0c0099'>skip login</font>"));
-        textViewSkipLogin.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(LoginActivity.this, HomeScreen.class);
-                startActivity(intent);
-            }
-        });
-    }
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.bLogin:
 
-    //this method is used to connect XML views to its Objects
-    private void initViews() {
-        etEmail = (EditText) findViewById(R.id.etEmail);
-        etPassword = (EditText) findViewById(R.id.etPassword);
-        textInputLayoutEmail = (TextInputLayout) findViewById(R.id.textInputLayoutEmail);
-        textInputLayoutPassword = (TextInputLayout) findViewById(R.id.textInputLayoutPassword);
-        btLogin = (Button) findViewById(R.id.btLogin);
+                User user = new User(null, null);
+                userLocalStore.storeUserData(user);
+                userLocalStore.setUserLoggedIn(true);
+                startActivity(new Intent(this, HomeScreen.class));
 
-    }
+                break;
+            case R.id.tvRegisterHere:
 
-    //This method is for handling fromHtml method deprecation
-    @SuppressWarnings("deprecation")
-    public static Spanned fromHtml(String html) {
-        Spanned result;
-        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.N) {
-            result = Html.fromHtml(html, Html.FROM_HTML_MODE_LEGACY);
-        } else {
-            result = Html.fromHtml(html);
-        }
-        return result;
-    }
+                startActivity(new Intent(this, RegisterActivity.class));
 
-    //This method is used to validate input given by user
-    public boolean validate() {
-        boolean valid = false;
-
-        //Get values from EditText fields
-        String Email = etEmail.getText().toString();
-        String Password = etPassword.getText().toString();
-
-        //Handling validation for Email field
-        if (!android.util.Patterns.EMAIL_ADDRESS.matcher(Email).matches()) {
-            valid = false;
-            textInputLayoutEmail.setError("Please enter valid email!");
-        } else {
-            valid = true;
-            textInputLayoutEmail.setError(null);
+                break;
         }
 
-        //Handling validation for Password field
-        if (Password.isEmpty()) {
-            valid = false;
-            textInputLayoutPassword.setError("Please enter valid password!");
-        } else {
-            if (Password.length() > 5) {
-                valid = true;
-                textInputLayoutPassword.setError(null);
-            } else {
-                valid = false;
-                textInputLayoutPassword.setError("Password is to short!");
-            }
-        }
-
-        return valid;
     }
-
-
 }
+
