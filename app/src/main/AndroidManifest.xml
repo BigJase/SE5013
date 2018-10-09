@@ -11,14 +11,24 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
+<<<<<<< HEAD
 
         <activity android:name=".LoginActivity" android:label="TreeCo">
+=======
+        <activity
+            android:name=".HomeScreen"
+            android:label="TreeCo" />
+        <activity
+            android:name=".LoginActivity"
+            android:label="TreeCo">
+>>>>>>> Refactor
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+<<<<<<< HEAD
         <activity android:name=".HomeScreen" android:label="TreeCo"/>
         <activity android:name=".ItemDetails" android:label="ItemDetails"/>
         <activity android:name=".MainActivity" android:label="Main activity"/>
@@ -28,6 +38,28 @@
         <activity android:name=".TreesSold" android:label="Trees"/>
         <activity android:name=".ProductsSold" android:label="Products"/>
 
+=======
+        <activity
+            android:name=".ProductScreen"
+            android:label="Products" />
+        <activity
+            android:name=".RegisterActivity"
+            android:label="Register" />
+        <activity
+            android:name=".UserAreaActivity"
+            android:label="UserArea" />
+        <activity
+            android:name=".ItemDetails"
+            android:label="ItemDetails" />
+        <activity
+            android:name=".TreeList"
+            android:label="Trees" />
+        <activity
+            android:name=".ProductList"
+            android:label="Products" />
+        <activity android:name=".Cart" />
+        <activity android:name=".CheckOut"></activity>
+>>>>>>> Refactor
     </application>
 
 </manifest>
