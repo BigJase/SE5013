@@ -9,10 +9,8 @@ public class User {
         this.userName = userName;
         this.email = email;
         this.password = password;
-        //user Address
     }
 
-<<<<<<< HEAD
     public User(String id, String userName, String email, String password ){
         this.id = id;
         this.userName = userName;
@@ -54,10 +52,4 @@ public class User {
     }
 
 
-=======
-    public User(String username, String password){
-            this.username = username;
-            this.password = password;
-    }
->>>>>>> Refactor
 }
