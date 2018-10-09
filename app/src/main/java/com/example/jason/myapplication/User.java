@@ -7,6 +7,7 @@ public class User {
         this.name = name;
         this.username = username;
         this.password = password;
+        //user Address
     }
 
     public User(String username, String password){

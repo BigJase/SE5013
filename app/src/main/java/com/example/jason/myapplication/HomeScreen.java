@@ -17,6 +17,7 @@ public class HomeScreen extends AppCompatActivity {
 
         final Button tree_button = findViewById(R.id.trees_button);
         final Button products_button = findViewById(R.id.products_button);
+        final Button cart_button = findViewById(R.id.cart_button);
         bLogout = (Button) findViewById(R.id.bLogout);
 
 
@@ -42,8 +43,14 @@ public class HomeScreen extends AppCompatActivity {
             }
         });
 
-    }
+        cart_button.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent = new Intent(HomeScreen.this, Cart.class);
+                startActivity(intent);
+            }
+        });
 
+    }
 
 
 }

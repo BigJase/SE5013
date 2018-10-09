@@ -41,7 +41,8 @@
         <activity
             android:name=".ProductList"
             android:label="Products" />
-        <activity android:name=".Cart"></activity>
+        <activity android:name=".Cart" />
+        <activity android:name=".CheckOut"></activity>
     </application>
 
 </manifest>

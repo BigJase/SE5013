@@ -11,27 +11,27 @@
         android:layout_width="360dp"
         android:layout_height="253dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="6dp"
+        android:layout_marginTop="9dp"
         android:layout_marginEnd="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/NumberItem" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/checkout"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="5dp"
-        android:text="Button"
+        android:layout_marginBottom="2dp"
+        android:text="Check out"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.985"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/Total"
+        android:id="@+id/checkoutitems"
         android:layout_width="352dp"
         android:layout_height="21dp"
         android:layout_marginStart="11dp"
@@ -71,6 +71,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.515"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Total"
+        app:layout_constraintTop_toBottomOf="@+id/checkoutitems"
         app:layout_constraintVertical_bias="0.0" />
 </android.support.constraint.ConstraintLayout>
