@@ -37,6 +37,7 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
         sqliteHelper = new SqliteHelper(this);
         initCreateAccountTextView();
+        initSkipLoginTextView();
         initViews();
 
 //        set click event of login button
@@ -95,7 +96,7 @@ public class LoginActivity extends AppCompatActivity {
 
     private void initSkipLoginTextView() {
         TextView textViewSkipLogin = (TextView) findViewById(R.id.textViewSkipLogin);
-        textViewSkipLogin.setText(fromHtml("<font color='#ffffff'>I don't have account yet. </font><font color='#0c0099'>create one</font>"));
+        textViewSkipLogin.setText(fromHtml("<font color='#ffffff'>Skip login and register. </font><font color='#0c0099'>skip login</font>"));
         textViewSkipLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
