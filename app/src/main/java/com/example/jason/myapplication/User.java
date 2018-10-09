@@ -1,6 +1,7 @@
 package com.example.jason.myapplication;
 
 public class User {
+//    adding commenting to change version
     public String id,userName, email, password;
 
     public User(){
@@ -15,6 +16,7 @@ public class User {
         this.userName = userName;
         this.email = email;
         this.password = password;
+        System.out.println("Print something");
     }
 
     public String getId() {
