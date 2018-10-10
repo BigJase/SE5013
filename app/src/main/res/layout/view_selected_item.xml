@@ -7,7 +7,7 @@
     tools:context=".ItemDetails">
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/add_cart_button"
         android:layout_width="127dp"
         android:layout_height="36dp"
         android:layout_alignParentBottom="true"
@@ -41,7 +41,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
-        android:layout_toStartOf="@+id/button"
+        android:layout_toStartOf="@+id/add_cart_button"
         android:text="Description:" />
 
     <TextView
@@ -50,7 +50,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="111dp"
-        android:layout_toStartOf="@+id/button"
+        android:layout_toStartOf="@+id/add_cart_button"
         android:text="Price:" />
 
     <TextView
@@ -59,7 +59,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="141dp"
-        android:layout_toStartOf="@+id/button"
+        android:layout_toStartOf="@+id/add_cart_button"
         android:text="Height:" />
 
     <TextView

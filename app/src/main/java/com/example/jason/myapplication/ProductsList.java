@@ -16,7 +16,7 @@ import java.util.List;
 
 import static java.lang.String.valueOf;
 
-public class ProductsSold extends AppCompatActivity {
+public class ProductsList extends AppCompatActivity {
 
     //private List<Trees> trees = new ArrayList<>();
     private List<Products> products = new ArrayList<>();
@@ -102,7 +102,7 @@ public class ProductsSold extends AppCompatActivity {
                 int prodPic = clickedProduct.getProductPicture();
 
                 //WHEN AN ITEM IS CLICKED, WILL OPEN UP IN NEW WINDOW WITH JUST THATT ITEM IN A DIFFERENT VIEW
-                setContentView(R.layout.view_selected_tree);
+                setContentView(R.layout.view_selected_item);
 
                 TextView labelChange = findViewById(R.id.labelHeight);
                 labelChange.setText("Rating:");
@@ -125,7 +125,7 @@ public class ProductsSold extends AppCompatActivity {
     // PRODUCTS (shovel etc)
     private class MyListAdapter2 extends ArrayAdapter<Products> {
         public MyListAdapter2() {
-            super(ProductsSold.this, R.layout.item_list_format, products);
+            super(ProductsList.this, R.layout.item_list_format, products);
         }
 
         @Override

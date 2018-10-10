@@ -2,11 +2,14 @@ package com.example.jason.myapplication;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -16,10 +19,17 @@ import java.util.List;
 
 import static java.lang.String.valueOf;
 
-public class TreesSold extends AppCompatActivity {
+public class TreesList extends AppCompatActivity {
 
     private List<Trees> trees = new ArrayList<>();
     //private List<Products> products = new ArrayList<>();
+    private ProductAdapter adapter;
+    private EditText edittext;
+
+    CartItem cartItem;
+    private String itemName;
+    private double itemPrice;
+    private ItemDetails itemDetails = new ItemDetails();
 
     public boolean onOptionsItemSelected(MenuItem item){
         int id = item.getItemId();
@@ -38,9 +48,13 @@ public class TreesSold extends AppCompatActivity {
         populateTreeListView();
         onClickCallTree();
 
+        System.out.println("TreeList hello");
+        itemDetails = new ItemDetails();
+
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
     }
+
     private void populateTreesList(){
         trees.add(new Trees(
                 "Pohu",
@@ -100,8 +114,10 @@ public class TreesSold extends AppCompatActivity {
                 double treePrice = clickedTree.getPrice();
                 int treePic = clickedTree.getTreePicture();
 
-                setContentView(R.layout.view_selected_tree);
+                setContentView(R.layout.view_selected_item);
 
+
+                itemDetails.setObject(clickedTree);
 
                 TextView labelChange = findViewById(R.id.labelHeight);
                 labelChange.setText("Rating:");
@@ -117,6 +133,13 @@ public class TreesSold extends AppCompatActivity {
 
                 TextView treeP = findViewById(R.id.itemPrice);
                 treeP.setText("$"+valueOf(treePrice));
+
+                // Creates a cartItem
+                cartItem = new CartItem(clickedTree.getTreeName(), clickedTree.getPrice());
+
+                // Sets the variables in ItemDetails.
+                itemDetails.setItem(cartItem);
+
             }
         });
     }
@@ -125,7 +148,7 @@ public class TreesSold extends AppCompatActivity {
     //Trees
     private class MyListAdapter extends ArrayAdapter<Trees>{
         public MyListAdapter() {
-            super(TreesSold.this, 0, trees);
+            super(TreesList.this, 0, trees);
         }
 
         @Override

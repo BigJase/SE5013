@@ -25,8 +25,10 @@
         <activity android:name=".ProductScreen" android:label="Products"/>
         <activity android:name=".RegisterActivity" android:label="Register"/>
         <activity android:name=".UserAreaActivity" android:label="UserArea"/>
-        <activity android:name=".TreesSold" android:label="Trees"/>
-        <activity android:name=".ProductsSold" android:label="Products"/>
+        <activity android:name=".TreesList" android:label="Trees"/>
+        <activity android:name=".ProductsList" android:label="Products"/>
+        <activity android:name=".CartScreen" android:label="Cart"/>
+        <activity android:name=".CheckOut" android:label="Checkout"/>
 
     </application>
 
