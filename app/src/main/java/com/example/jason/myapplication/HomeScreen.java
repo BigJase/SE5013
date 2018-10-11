@@ -8,28 +8,28 @@ import android.widget.Button;
 
 public class HomeScreen extends AppCompatActivity {
 
-    Button bLogout,tree_button,products_button,cart_button;
+    Button bLogout;
+
 
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.home_screen);
 
-        tree_button = findViewById(R.id.trees_button);
-        products_button = findViewById(R.id.products_button);
-        cart_button = findViewById(R.id.cart_button);
+        final Button tree_button = findViewById(R.id.trees_button);
+        final Button products_button = findViewById(R.id.products_button);
         bLogout = (Button) findViewById(R.id.bLogout);
 
 
         tree_button.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
-                Intent intent = new Intent(HomeScreen.this, TreesList.class);
+                Intent intent = new Intent(HomeScreen.this, TreesSold.class);
                 startActivity(intent);
             }
         });
 
         products_button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v){
-                Intent intent = new Intent(HomeScreen.this, ProductsList.class);
+                Intent intent = new Intent(HomeScreen.this, ProductsSold.class);
                 startActivity(intent);
             }
 
@@ -41,14 +41,6 @@ public class HomeScreen extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
-        cart_button.setOnClickListener(new View.OnClickListener(){
-            public void onClick(View v){
-                Intent intent = new Intent(HomeScreen.this, CartScreen.class);
-                startActivity(intent);
-            }
-        });
-
 
     }
 
