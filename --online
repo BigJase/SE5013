@@ -1,0 +1,317 @@
+[33mcommit d79489038432ef397494f9bd27cb1a6b3a00e858[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Merge: 3556dc4 aa5942e
+Author: Daniel <danielmaskell21@gmail.com>
+Date:   Thu Oct 11 12:39:38 2018 +1300
+
+    Fixed 2
+
+[33mcommit aa5942e8adfe34c4c3c9f4361264f1aed163b869[m
+Author: BigJase <38375797+BigJase@users.noreply.github.com>
+Date:   Thu Oct 11 12:33:22 2018 +1300
+
+    wipe
+
+[33mcommit 3556dc4c2ea408dc29390406da08bb929a76f1b7[m
+Author: Daniel <danielmaskell21@gmail.com>
+Date:   Thu Oct 11 12:31:48 2018 +1300
+
+    Fixed
+
+[33mcommit 400fa460b148effb58568c52df38bc5951d16526[m
+Author: BigJase <38375797+BigJase@users.noreply.github.com>
+Date:   Thu Oct 11 12:30:09 2018 +1300
+
+    wipe
+
+[33mcommit 90118934acb52f53770f87956ba3df34f1e20b3f[m
+Author: BigJase <38375797+BigJase@users.noreply.github.com>
+Date:   Wed Oct 10 12:37:19 2018 +1300
+
+    Rescued application 10.10.2018
+
+[33mcommit 135402f9cb1c98cf1c5f8d54a51aa8f710cb0c53[m
+Merge: 91ffeb6 6c0c562
+Author: BigJase <38375797+BigJase@users.noreply.github.com>
+Date:   Wed Oct 10 12:35:57 2018 +1300
+
+    Merge branch 'master' into Rescue_v2
+
+[33mcommit 91ffeb6face8f8c4b3d49a51e32b866eec49daf5[m[33m ([m[1;31morigin/Rescue_v2[m[33m)[m
+Author: BigJase <38375797+BigJase@users.noreply.github.com>
+Date:   Wed Oct 10 12:33:14 2018 +1300
+
+    Rescued application 10.10.2018
+
+[33mcommit 6c0c562bd1a67d5a93f453d6a01d4668cadc8d6e[m[33m ([m[1;31morigin/rescue[m[33m)[m
+Author: BigJase <38375797+BigJase@users.noreply.github.com>
+Date:   Tue Oct 9 21:37:34 2018 +1300
+
+    Revert "Skip Login"
+    
+    This reverts commit ae5837bf62c4f49c96abb4e7e6716db2d58878b9.
+
+[33mcommit fa9f489a989a958a39b17c5816afa38b72d38823[m
+Author: BigJase <38375797+BigJase@users.noreply.github.com>
+Date:   Tue Oct 9 21:26:28 2018 +1300
+
+    Revert "Update app/src/main/java/com/example/jason/myapplication/LoginActivity.java"
+    
+    This reverts commit e46a6a917cd52b342931ea5a40450fcb8847ef49.
+
+[33mcommit 8622aaec01b45f5faa8c1c68849d32fde4d0f9c6[m
+Author: BigJase <38375797+BigJase@users.noreply.github.com>
+Date:   Tue Oct 9 21:24:57 2018 +1300
+
+    test
+
+[33mcommit 17f67f708dd17760a5c35a08bea40e7c0b3efa67[m
+Merge: ae5837b e46a6a9
+Author: BigJase <38375797+BigJase@users.noreply.github.com>
+Date:   Tue Oct 9 20:56:09 2018 +1300
+
+    Merge branch 'Refactor'
+
+[33mcommit e46a6a917cd52b342931ea5a40450fcb8847ef49[m
+Author: BigJase <38375797+BigJase@users.noreply.github.com>
+Date:   Tue Oct 9 19:41:09 2018 +1300
+
+    Update app/src/main/java/com/example/jason/myapplication/LoginActivity.java
+
+[33mcommit ae5837bf62c4f49c96abb4e7e6716db2d58878b9[m
+Author: BigJase <38375797+BigJase@users.noreply.github.com>
+Date:   Tue Oct 9 18:24:53 2018 +1300
+
+    Skip Login
+
+[33mcommit 1bc6cd8ae49920015a5012a0cbbb1bad8d222364[m
+Author: BigJase <38375797+BigJase@users.noreply.github.com>
+Date:   Tue Oct 9 17:56:17 2018 +1300
+
+    Login
+
+[33mcommit 9e7d0a9f7fc252dda7f247e09de2175938837eb7[m[33m ([m[1;31morigin/Refactor[m[33m)[m
+Author: Kelvin52 <suilamchi0709@yahoo.com.hk>
+Date:   Tue Oct 9 14:27:54 2018 +1300
+
+    Most CheckOut Act feature finished, delivery option + address. setAddress when confirmButton pressed.
+
+[33mcommit cdf937087a1c4a54929b381ec994f7a64f6be5ed[m
+Author: Kelvin52 <suilamchi0709@yahoo.com.hk>
+Date:   Mon Oct 8 14:53:44 2018 +1300
+
+    Created Cart Act
+
+[33mcommit 99fa79c6c3bf9ed1581e429dd855fdf67ab0a096[m
+Author: Kelvin52 <suilamchi0709@yahoo.com.hk>
+Date:   Mon Oct 8 14:47:18 2018 +1300
+
+    Created check out Act
+
+[33mcommit ba4c514ac9aa89ea04434497a144c1aa1a69aec9[m
+Author: timmm1 <37868339+timmm1@users.noreply.github.com>
+Date:   Mon Oct 8 14:10:48 2018 +1300
+
+    -products page had items now with same format as trees
+    -onClick for products opens up the view for the single item clicked with more info.
+
+[33mcommit 3686ab5cc6dcfe134f29d1fefd240bce5e112648[m
+Author: timmm1 <37868339+timmm1@users.noreply.github.com>
+Date:   Mon Oct 8 13:12:13 2018 +1300
+
+    -products page had items now with same format as trees
+    -onClick for products opens up the view for the single item clicked with more info.
+
+[33mcommit 6a057ca50c56ff6c959c289e6bbd1177890b1e2e[m
+Author: timmm1 <37868339+timmm1@users.noreply.github.com>
+Date:   Sat Oct 6 19:33:23 2018 +1300
+
+    -products page had items now with same format as trees
+    -onClick for products opens up the view for the single item clicked with more info.
+
+[33mcommit d706ad3203c807e8183bfaca67ef6521ebada741[m
+Author: timmm1 <37868339+timmm1@users.noreply.github.com>
+Date:   Wed Oct 3 18:43:31 2018 +1300
+
+    - Change layout xml names
+    - Updated the tree items layout
+    - Updated login and homescreen layouts
+    - Create Products.java for the products to sit in. Still need to put them into the products button so you can view them like the trees, and then need to make it so those will be able to be viewed in the item view where the item is shown in more detail and so they can be added to the cart.
+
+[33mcommit 9c45e1aa6b167fc4760b00635d84ac47e728c48b[m
+Merge: 446304b 2c69335
+Author: Kelvin52 <37885095+Kelvin52@users.noreply.github.com>
+Date:   Tue Oct 2 22:04:53 2018 +1300
+
+    Merge branch 'master' of https://github.com/BigJase/SE5013
+
+[33mcommit 446304bdc2c2a9db67341c26671114eeffc6227a[m
+Author: Kelvin52 <37885095+Kelvin52@users.noreply.github.com>
+Date:   Tue Oct 2 22:04:45 2018 +1300
+
+    OO items
+
+[33mcommit 2c693356e3fab38779ea59454fddec751a470392[m
+Author: timmm1 <37868339+timmm1@users.noreply.github.com>
+Date:   Tue Oct 2 18:11:25 2018 +1300
+
+    Re-created what the Trees button does. Added a ListView.
+    Opens up an arraylist of items. If an items is clicked, opens in new window with that item and better displayed info.
+
+[33mcommit 5a2a8372f9ecc2f49afa5602e5095f892a73c9f1[m
+Merge: a8bd041 a1cf925
+Author: timmm1 <37868339+timmm1@users.noreply.github.com>
+Date:   Mon Oct 1 14:34:50 2018 +1300
+
+    Merge remote-tracking branch 'origin/master'
+
+[33mcommit a8bd0413b9ba94fe660e3cc2b5b25e246ebc8b92[m
+Author: timmm1 <37868339+timmm1@users.noreply.github.com>
+Date:   Mon Oct 1 14:34:18 2018 +1300
+
+    Added a couple of back buttons.
+
+[33mcommit a1cf9256b462af8dde28fd7dc1908a79f7204409[m
+Author: Daniel <danielmaskell21@gmail.com>
+Date:   Mon Oct 1 14:30:41 2018 +1300
+
+    Fixed product screen crashing the app.
+
+[33mcommit 67f3a7eb44bfad1d1a68796cf6079e301db856fc[m
+Author: BigJase <38375797+BigJase@users.noreply.github.com>
+Date:   Fri Sep 28 11:25:15 2018 +1200
+
+    Implemented Login and Register screens
+
+[33mcommit ea0a0c585457ba36874791a268c5c0734cce9262[m
+Author: BigJase <38375797+BigJase@users.noreply.github.com>
+Date:   Fri Sep 28 09:42:58 2018 +1200
+
+    Adding login function
+
+[33mcommit d434a465ed542af1458442bf3617d67562903ceb[m
+Merge: b83c679 672a579
+Author: BigJase <38375797+BigJase@users.noreply.github.com>
+Date:   Fri Sep 28 09:41:28 2018 +1200
+
+    Merge remote-tracking branch 'origin/master'
+    
+    # Conflicts:
+    #       app/src/main/java/com/example/jason/myapplication/ProductScreen.java
+    #       app/src/main/res/layout/product_screen.xml
+
+[33mcommit b83c679b1c7dd057b4071768863a08142042aadb[m
+Author: BigJase <38375797+BigJase@users.noreply.github.com>
+Date:   Fri Sep 28 09:40:36 2018 +1200
+
+    Adding login function
+
+[33mcommit 672a579ea59ab039095f7263ef7871e9fae501fe[m
+Author: Daniel <danielmaskell21@gmail.com>
+Date:   Wed Sep 26 17:01:51 2018 +1200
+
+    -Fixed crash with product button. Hadn't given the recyclerview an ID
+
+[33mcommit 07ec634e506d9df42d8b96d6cbff11d0d605dfc1[m
+Author: Daniel <danielmaskell21@gmail.com>
+Date:   Wed Sep 26 16:35:53 2018 +1200
+
+    -Added Product Screen. Clicking on the product buttons crashes the app though.
+
+[33mcommit 6c5c6272a73dd9f46f09bd56106ae5d9dfae81d3[m
+Author: BigJase <38375797+BigJase@users.noreply.github.com>
+Date:   Wed Sep 26 14:15:30 2018 +1200
+
+    Login Screen and search feature
+
+[33mcommit b5972dcd9ae05336fde0180c23edcc6c87dd2ca5[m
+Author: BigJase <38375797+BigJase@users.noreply.github.com>
+Date:   Wed Sep 26 14:12:50 2018 +1200
+
+    Login Screen and search feature
+
+[33mcommit efc95fd17b68459fba6a864b5f98ef4049a02663[m
+Merge: 0019f6a 53b73b3
+Author: BigJase <38375797+BigJase@users.noreply.github.com>
+Date:   Wed Sep 26 14:10:48 2018 +1200
+
+    Merge remote-tracking branch 'origin/master'
+    
+    # Conflicts:
+    #       app/src/main/AndroidManifest.xml
+
+[33mcommit 0019f6a20985aa80d6b0ec82c1b048ab1f53caf8[m
+Author: BigJase <38375797+BigJase@users.noreply.github.com>
+Date:   Wed Sep 26 14:10:21 2018 +1200
+
+    Login Screen and search feature
+
+[33mcommit 53b73b3d3e495e5b8c0c552ac092d29ee3bb3c01[m
+Author: Daniel <danielmaskell21@gmail.com>
+Date:   Wed Sep 26 14:09:24 2018 +1200
+
+    -Added Logo
+
+[33mcommit 74ff740443beabd8c2df7b35d8abfe48a95a7d6d[m
+Author: Daniel <danielmaskell21@gmail.com>
+Date:   Wed Sep 26 11:57:41 2018 +1200
+
+    -Made the Home Screen open on app launch
+    -Added buttons (trees, cart, products)
+    -Pressing tress button brings up list of trees
+
+[33mcommit b92a172377c30c224748ca00d1cf14ece19351a6[m
+Author: BigJase <38375797+BigJase@users.noreply.github.com>
+Date:   Tue Sep 25 16:54:28 2018 +1200
+
+    Added Lemon and Kowhai
+
+[33mcommit f3d2332debda1c9ec08f09600634838dc108be78[m
+Merge: 9aee2ed 0d5256e
+Author: BigJase <38375797+BigJase@users.noreply.github.com>
+Date:   Tue Sep 25 16:53:28 2018 +1200
+
+    Merge remote-tracking branch 'origin/master'
+
+[33mcommit 9aee2ed90dd6c6c011b21a42d9106a7644e0b7d3[m
+Author: BigJase <38375797+BigJase@users.noreply.github.com>
+Date:   Tue Sep 25 16:53:13 2018 +1200
+
+    Added Lemon and Kowhai
+
+[33mcommit 0d5256e5cbd874738b2df0c6636ec8ab526530db[m
+Author: Daniel <danielmaskell21@gmail.com>
+Date:   Tue Sep 25 16:51:56 2018 +1200
+
+    Added Home Screen code. Doesn't do anything yet though.
+
+[33mcommit c7c78e0596b1dfa888fbb4b38e4b6122b37a0d90[m
+Author: BigJase <38375797+BigJase@users.noreply.github.com>
+Date:   Tue Sep 25 16:13:15 2018 +1200
+
+    Added Pohutakawa
+
+[33mcommit fca80f4c4c9516d120eb5684343d8e2a18d51580[m
+Author: BigJase <38375797+BigJase@users.noreply.github.com>
+Date:   Tue Sep 25 15:45:53 2018 +1200
+
+    Populated Recycler View
+    
+    Need to change Images and values
+
+[33mcommit f154f3dcda0431bc9387858bde5fbb34b2c6dba2[m
+Author: BigJase <38375797+BigJase@users.noreply.github.com>
+Date:   Tue Sep 25 14:37:46 2018 +1200
+
+    Recycler View
+
+[33mcommit e1811c3eaad86c7bbde5b556925d912d083adb5a[m
+Author: BigJase <38375797+BigJase@users.noreply.github.com>
+Date:   Tue Sep 25 14:36:11 2018 +1200
+
+    Recycler View
+
+[33mcommit 8b44bd5a3b11add2b67b54b7747fbc01604587e1[m
+Author: BigJase <38375797+BigJase@users.noreply.github.com>
+Date:   Mon Sep 24 13:25:24 2018 +1200
+
+    Initial commit
