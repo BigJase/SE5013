@@ -19,6 +19,7 @@ import static android.text.Html.fromHtml;
 
 public class LoginActivity extends AppCompatActivity {
 
+    CartListStore cartStore = new CartListStore();
 //    declaration EditTexts
     EditText etEmail,etPassword;
 

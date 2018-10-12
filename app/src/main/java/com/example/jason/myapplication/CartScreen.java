@@ -19,16 +19,20 @@ import static java.lang.String.valueOf;
 public class CartScreen extends AppCompatActivity {
 
     CartList cart = new CartList();
-    List<Object> cartList = new ArrayList<>();
+    List<CartItem> cartList = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
+        System.out.println("We can pass to here");
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cart);
 
         final Button checkout_button = findViewById(R.id.checkout_button);
 
         final Button checkout = findViewById(R.id.checkout_button);
+
+        populateProductListView();
 
         checkout.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
@@ -38,6 +42,44 @@ public class CartScreen extends AppCompatActivity {
         });
 
         cartList = cart.getCart();
+    }
+
+    public void setCartList(List cartList){
+        this.cartList = cartList;
+        printCartList();
+    }
+
+    public void printCartList(){
+        System.out.println("This cart :"+cartList.size());
+    }
+
+    private void populateProductListView(){
+        ArrayAdapter<CartItem> adapter3 = new MyListAdapter3();
+        ListView list3 =findViewById(R.id.cart_list);
+        list3.setAdapter(adapter3);
+
+
+    }
+
+    private class MyListAdapter3 extends ArrayAdapter<CartItem>{
+        public MyListAdapter3(){super(CartScreen.this, R.layout.activity_cart, cartList);}
+
+        @Override
+        public View getView(int position, View convertView, ViewGroup parent){
+            View itemView = convertView;
+            if(itemView == null){
+                itemView = getLayoutInflater().inflate(R.layout.activity_cart, parent, false);
+            }
+
+            CartItem currentItem = cartList.get(position);
+
+            TextView name = itemView.findViewById(R.id.itemName1);
+            name.setText(currentItem.getItemName());
+
+            TextView price = itemView.findViewById(R.id.itemPrice1);
+            price.setText((int)currentItem.getItemPrice());
+            return itemView;
+        }
     }
     /**
     private void populateCartListView() {

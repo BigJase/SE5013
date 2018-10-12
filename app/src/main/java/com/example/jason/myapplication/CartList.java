@@ -8,7 +8,7 @@ import java.util.List;
 public class CartList {
 
     private List<CartItem> cartItem = new ArrayList<>();
-
+    private CartListStore cartStore;
     private double price;
     private String name;
 
@@ -22,6 +22,7 @@ public class CartList {
 
     public void setCart(List cart){
         this.cartItem = cart;
+        //cartStore.storeArray(cartItem);
     }
     public String getItemName(){
         return this.name;
@@ -30,4 +31,6 @@ public class CartList {
     public double getItemPrice(){
         return this.price;
     }
+
+
 }

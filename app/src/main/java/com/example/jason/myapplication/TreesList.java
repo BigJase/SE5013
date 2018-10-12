@@ -1,5 +1,6 @@
 package com.example.jason.myapplication;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Editable;
@@ -9,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ListView;
@@ -21,15 +23,13 @@ import static java.lang.String.valueOf;
 
 public class TreesList extends AppCompatActivity {
 
+    Button addToCart;
+    Button toCartout;
+    CartScreen cartScreen = new CartScreen();
+    CartList cart = new CartList();
+    List<Object> cartList = new ArrayList<>();
+    CartItem cartItem = new CartItem();
     private List<Trees> trees = new ArrayList<>();
-    //private List<Products> products = new ArrayList<>();
-    private ProductAdapter adapter;
-    private EditText edittext;
-
-    CartItem cartItem;
-    private String itemName;
-    private double itemPrice;
-    private ItemDetails itemDetails = new ItemDetails();
 
     public boolean onOptionsItemSelected(MenuItem item){
         int id = item.getItemId();
@@ -48,11 +48,13 @@ public class TreesList extends AppCompatActivity {
         populateTreeListView();
         onClickCallTree();
 
-        System.out.println("TreeList hello");
-        itemDetails = new ItemDetails();
+
+        //cartList = cart.getCart();
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
+
+
     }
 
     private void populateTreesList(){
@@ -99,28 +101,60 @@ public class TreesList extends AppCompatActivity {
         ListView list = findViewById(R.id.treesListView);
         list.setAdapter(adapter);
     }
+
+
+    /******************************************
+     *This is where we show the selected tree
+     ******************************************/
+
     private void onClickCallTree(){
         ListView list = findViewById(R.id.treesListView);
         list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
+                final Trees clickedTree = trees.get(position);
 
-                //  TREES  TREES
-                Trees clickedTree = trees.get(position);
-
-                String treeName = clickedTree.getTreeName();
+                final String treeName = clickedTree.getTreeName();
                 String treeDescription = clickedTree.getDescription();
-                double treePrice = clickedTree.getPrice();
+                final double treePrice = clickedTree.getPrice();
                 int treePic = clickedTree.getTreePicture();
 
                 setContentView(R.layout.view_selected_item);
+                addToCart = findViewById(R.id.add_cart_button);
+                toCartout =findViewById(R.id.cart_button);
+
+                addToCart.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        System.out.println("Test for button");
+                        cartItem.setItemName(treeName);
+                        cartItem.setItemPrice(treePrice);
+
+                        cartList = cart.getCart();
+                        System.out.println("Product before add Cart Size : "+cartList.size());
+                        cartList.add(cartItem);
+                        System.out.println("Product after add Cart Size : "+cartList.size());
+                        cart.setCart(cartList);
 
 
-                itemDetails.setObject(clickedTree);
+                        System.out.println(cartItem.getItemName());
+                        System.out.println(cartItem.getItemPrice());
+                    }
+                });
 
-                TextView labelChange = findViewById(R.id.labelHeight);
-                labelChange.setText("Rating:");
+                toCartout.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        cartScreen.setCartList(cartList);
+                        Intent intent = new Intent(TreesList.this, CartScreen.class);
+                        startActivity(intent);
+                    }
+                });
+
+
+                TextView treeHeight = findViewById(R.id.height);
+                treeHeight.setText("1.83m");
 
                 TextView treeN = findViewById(R.id.itemName);
                 treeN.setText(treeName);
@@ -132,13 +166,8 @@ public class TreesList extends AppCompatActivity {
                 treepic.setImageResource(treePic);
 
                 TextView treeP = findViewById(R.id.itemPrice);
-                treeP.setText("$"+valueOf(treePrice));
-
-                // Creates a cartItem
-                cartItem = new CartItem(clickedTree.getTreeName(), clickedTree.getPrice());
-
-                // Sets the variables in ItemDetails.
-                itemDetails.setItem(cartItem);
+                treeP.setText("$ "+valueOf(treePrice));
+                
 
             }
         });
@@ -151,8 +180,14 @@ public class TreesList extends AppCompatActivity {
             super(TreesList.this, 0, trees);
         }
 
+
+        /******************************************
+         *This is where we print the item list view
+         ******************************************/
+
         @Override
         public View getView(int position, View convertView, ViewGroup parent){
+
             // make sure we have a view to work with
             View itemView = convertView;
             if(itemView == null){
@@ -176,7 +211,7 @@ public class TreesList extends AppCompatActivity {
 
             // Price of tree:
             TextView price = itemView.findViewById(R.id.itemPrice1);
-            price.setText("$" + currentTree.getPrice());
+            price.setText("$ " + currentTree.getPrice());
 
             return itemView;
         }
